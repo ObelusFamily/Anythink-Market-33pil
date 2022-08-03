@@ -4,10 +4,50 @@ To start the app use Docker. It will start both frontend and backend, including 
 
 Please find more info about each part in the relevant Readme file ([frontend](frontend/readme.md) and [backend](backend/README.md)).
 
-## Development
+# First setup
 
-When implementing a new feature or fixing a bug, please create a new pull request against `main` from a feature/bug branch and add `@vanessa-cooper` as reviewer.
+## Install Git and setup workspace repisotry
+Install the git command line on your system
 
-## First setup
+https://github.com/git-guides/install-git 
 
-**[TODO 05/01/2018 @vanessa-cooper]:** _It's been a while since anyone ran a fresh copy of this repo. I think it's worth documenting the steps needed to install and run the repo on a new machine?_
+After installing git on to your system, please open the command line and run the following commands to get started
+
+Navigate to the workspace folder
+```
+$ cd {WorkpaceFolderName}
+```
+
+Initialise git in the workspace folder 
+```
+ $ git init
+```
+
+Clone the git repistory in your local system
+```
+$ git clone https://github.com/ObelusFamily/Anythink-Market-33pil
+```
+
+## Install Docker
+Install Docker on your system based on your operating system
+
+https://docs.docker.com/get-docker/
+
+Verify docker is ready by running the following commands in your terminal: ```docker -v``` and ```docker-compose -v```.
+
+## Setting up and running the project
+Run the following commands to start running the project locally using docker
+```
+docker-compose up 
+```
+If Docker is working correctly, the backend should be running and able to connect to your local database.
+Let's test this by pointing your browser to http://localhost:3000/api/ping
+
+If everything is setup correctly you will see a  similar message on the browser
+***{"msg":"Pong! Seems like Everythink is working, great job!"}***
+
+Now let's make sure that the frontend is connected to the backend by creating a new user on http://localhost:3001/register
+
+
+
+
